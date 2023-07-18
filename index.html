@@ -12,7 +12,7 @@
     />
     <title>Frontend Mentor | Calculator app</title>
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
+    <script src="script.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -27,26 +27,53 @@
           <div class="col">
             <div class="calc-container">
               <div class="wrapper">
-                <div class="one">calc</div>
-                <div class="two" id="output">Two</div>
-                <button class="seven" id="seven-btn">7</button>
-                <button class="eight" id="eight-btn">8</button>
-                <button class="nine" id="nine-btn">9</button>
-                <button class="delete" id="delete-btn">DEL</button>
-                <button class="seven" id="four-btn">4</button>
-                <button class="eight" id="five-btn">5</button>
-                <button class="nine" id="six-btn">6</button>
-                <button class="ten" id="add-btn">+</button>
-                <button class="eleven" id="one-btn">1</button>
-                <button class="twelve" id="two-btn">2</button>
-                <button class="thirteen" id="three-btn">3</button>
-                <button class="fourteen" id="sub-btn">-</button>
-                <button class="fifteen" id="decimal-btn">.</button>
-                <button class="sixteen" id="zero-btn">0</button>
-                <button class="seventeen" id="divide-btn">/</button>
-                <button class="eighteen" id="add-btn">+</button>
-                <button class="reset" id="reset">RESET</button>
-                <button class="equal" id="equal">=</button>
+                <div class="one">calc
+                  
+                  <div class="theme-toggle">
+                    <label class="custom-radio-button">
+                      <input id="first" name="toggle-state" type="radio" checked />
+                      <span class="checkmark"></span>
+                    </label>
+                  
+                    <label class="custom-radio-button">
+                      <input id="second" name="toggle-state" type="radio" />
+                      <span class="checkmark"></span>
+                    </label>
+                  
+                    <label class="custom-radio-button">
+                      <input id="third" name="toggle-state" type="radio" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="two">
+                  <input type="text" id="result" readonly>
+                </div>
+                <button class="seven" id="number-btn" value="7" onclick="appendValue(7)">7</button>
+                <button class="eight"id="number-btn" value="8" onclick="appendValue(8)">8</button>
+                <button class="nine" id="number-btn" value="9" onclick="appendValue(9)">9</button>
+                <button class="delete" id="delete-btn" value="Del" onclick="deleteLastCharacter()" >DEL</button>
+                <button class="seven" id="number-btn" value="4" onclick="appendValue(4)">4</button>
+                <button class="eight" id="number-btn"  value="5" onclick="appendValue(5)">5</button>
+                <button class="nine" id="number-btn" value="6" onclick="appendValue(6)">6</button>
+                <button class="ten" id="number-btn" value="+" onclick="appendValue('+')" >+</button>
+                <button
+                  class="eleven"
+                  id="number-btn" 
+                  value="1"
+                  onclick="appendValue(1)"
+                >
+                  1
+                </button>
+                <button class="twelve" id="number-btn" value="2" onclick="appendValue(2)">2</button>
+                <button class="thirteen" id="number-btn"value="3" onclick="appendValue(3)">3</button>
+                <button class="fourteen" id="number-btn" value="-" onclick="appendValue('-')">-</button>
+                <button class="fifteen" id="number-btn" value="." onclick="appendValue('.')">.</button>
+                <button class="sixteen" id="number-btn" value="0" onclick="appendValue(0)">0</button>
+                <button class="seventeen" id="number-btn" value="/" onclick="appendValue('/')">/</button>
+                <button class="eighteen" id="number-btn" value="*" onclick="appendValue('*')">+</button>
+                <button class="reset" id="reset" value="C" onclick="clearResult()">RESET</button>
+                <button class="equal" id="equal" value="=" onclick="calculate()">=</button>
               </div>
             </div>
           </div>
