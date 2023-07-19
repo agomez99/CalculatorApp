@@ -47,7 +47,6 @@ setbackground();
 
 buttons.forEach((element, index) => {
   element.addEventListener("click", () => {
-    console.log(element);
     element.style.opacity = "1";
     if (index === 0) {
       document.getElementById("one").style.backgroundColor = "hsl(6, 63%, 50%)"
@@ -67,8 +66,14 @@ buttons.forEach((element, index) => {
       }
       document.getElementsByClassName("delete-btn")[0].style.backgroundColor = "hsl(225, 21%, 49%)";
       document.getElementsByClassName("reset-btn")[0].style.backgroundColor = "hsl(225, 21%, 49%)";
-      document.getElementsByClassName("equal-btn")[0].style.backgroundColor = "hsl(6, 63%, 50%)";
+      document.getElementsByClassName("equal-btn")[0].style.backgroundColor = "hsl(6, 63%, 50%";
+      
+      var labels = document.getElementsByClassName("switch-label");
+      for (var i = 0, len = labels.length; i < len; i++) {
+        labels[i].style.color = 'white';
+        }
 
+        document.getElementsByClassName("equal-btn")[0].style.boxShadow= "0px 5px 0px 0px  hsl(6, 70%, 34%)";
 
     
 
@@ -92,6 +97,12 @@ buttons.forEach((element, index) => {
       document.getElementsByClassName("reset-btn")[0].style.backgroundColor = "hsl(185, 42%, 37%)";
       document.getElementsByClassName("equal-btn")[0].style.backgroundColor = "hsl(25, 98%, 40%)";
 
+      var labels = document.getElementsByClassName("switch-label");
+      for (var i = 0, len = labels.length; i < len; i++) {
+        labels[i].style.color = 'black';
+        }
+
+        document.getElementsByClassName("equal-btn")[0].style.boxShadow= "0px 5px 0px 0px  hsl(6, 70%, 34%)";
 
     
     } else {
@@ -113,8 +124,13 @@ buttons.forEach((element, index) => {
       document.getElementsByClassName("reset-btn")[0].style.backgroundColor = " hsl(281, 89%, 26%)";
       document.getElementsByClassName("equal-btn")[0].style.backgroundColor = "hsl(176, 100%, 44%)";
 
+      var labels = document.getElementsByClassName("switch-label");
+      for (var i = 0, len = labels.length; i < len; i++) {
+        labels[i].style.color = 'yellow';
+        }
 
-      
+        document.getElementsByClassName("equal-btn")[0].style.boxShadow= "0px 5px 0px 0px   hsl(177, 92%, 70%)";
+
 
     }
     buttons
