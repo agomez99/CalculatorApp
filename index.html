@@ -19,42 +19,46 @@
 
 <body>
   <main>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col">
 
           <div class="top-container">
             <h1 class="calc-text">calc</h1>
+            <label class="toggle-label">THEME</label>
             <div class="tri-state-toggle">
+              <label class="toggle-switch-label">1</label>
               <input class="button" type="radio" name="toggle" id="one" />
+              <label class="toggle-switch-label">2</label>
               <input class="button" type="radio" name="toggle" id="two" />
+              <label class="toggle-switch-label">3</label>
               <input class="button" type="radio" name="toggle" id="three" />
             </div>
 
           </div>
           <div class="result-container">
-            <input type="text" id="result" readonly class="result-input">
+            <input type="text" id="result"  class="result-input" readonly>
           </div>
           <div class="calc-container">
             <div class="wrapper">
-              <button id="number-btn" value="7" onclick="appendValue(7)">7</button>
-              <button id="number-btn" value="8" onclick="appendValue(8)">8</button>
-              <button id="number-btn" value="9" onclick="appendValue(9)">9</button>
-              <button id="delete-btn" value="Del" onclick="deleteLastCharacter()">DEL</button>
-              <button id="number-btn" value="4" onclick="appendValue(4)">4</button>
-              <button id="number-btn" value="5" onclick="appendValue(5)">5</button>
-              <button id="number-btn" value="6" onclick="appendValue(6)">6</button>
-              <button id="number-btn" value="+" onclick="appendValue('+')">+</button>
-              <button id="number-btn" value="1" onclick="appendValue(1)"> 1</button>
-              <button id="number-btn" value="2" onclick="appendValue(2)">2</button>
-              <button id="number-btn" value="3" onclick="appendValue(3)">3</button>
-              <button id="number-btn" value="-" onclick="appendValue('-')">-</button>
-              <button id="number-btn" value="." onclick="appendValue('.')">.</button>
-              <button id="number-btn" value="0" onclick="appendValue(0)">0</button>
-              <button id="number-btn" value="/" onclick="appendValue('/')">/</button>
-              <button id="number-btn" value="*" onclick="appendValue('*')">*</button>
-              <button class="reset" id="reset" value="C" onclick="clearResult()">RESET</button>
-              <button class="equal" id="equal" value="=" onclick="calculate()">=</button>
+              <button class="number-btn" id="number-btn" value="7" onclick="appendValue(7)">7</button>
+              <button class="number-btn" id="number-btn" value="8" onclick="appendValue(8)">8</button>
+              <button class="number-btn" id="number-btn" value="9" onclick="appendValue(9)">9</button>
+              <button class="delete-btn"id="delete-btn" value="Del" onclick="deleteLastCharacter()">DEL</button>
+              <button class="number-btn" id="number-btn" value="4" onclick="appendValue(4)">4</button>
+              <button class="number-btn" id="number-btn" value="5" onclick="appendValue(5)">5</button>
+              <button class="number-btn" id="number-btn" value="6" onclick="appendValue(6)">6</button>
+              <button class="number-btn" class="" id="number-btn" value="+" onclick="appendValue('+')">+</button>
+              <button class="number-btn" id="number-btn" value="1" onclick="appendValue(1)"> 1</button>
+              <button class="number-btn" id="number-btn" value="2" onclick="appendValue(2)">2</button>
+              <button class="number-btn" id="number-btn" value="3" onclick="appendValue(3)">3</button>
+              <button class="number-btn" id="number-btn" value="-" onclick="appendValue('-')">-</button>
+              <button class="number-btn" id="number-btn" value="." onclick="appendValue('.')">.</button>
+              <button class="number-btn" id="number-btn" value="0" onclick="appendValue(0)">0</button>
+              <button class="number-btn" id="number-btn" value="/" onclick="appendValue('/')">/</button>
+              <button class="number-btn" id="number-btn" value="*" onclick="appendValue('*')">*</button>
+              <button class="reset-btn" id="reset" value="C" onclick="clearResult()">RESET</button>
+              <button class="equal-btn" id="equal" value="=" onclick="calculate()">=</button>
             </div>
           </div>
         </div>
