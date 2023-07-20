@@ -38,101 +38,91 @@ const calculate = () => {
 }
 
 const buttons = Array.from(document.getElementsByClassName("button"));
-
-const setbackground = () => {
-  document.getElementsByTagName("body")[0].style.backgroundColor = "hsl(222, 26%, 31%)";
+const setBackground = () => {
+  document.body.style.backgroundColor = "hsl(222, 26%, 31%)";
 }
-
-setbackground();
-
+setBackground();
 buttons.forEach((element, index) => {
   element.addEventListener("click", () => {
     element.style.opacity = "1";
-    if (index === 0) {
-      document.getElementById("one").style.backgroundColor = "hsl(6, 63%, 50%)"
-      document.getElementsByClassName("toggle-label")[0].style.color = "white";
-      document.getElementsByTagName("body")[0].style.backgroundColor = "hsl(222, 26%, 31%)";
-      document.getElementsByClassName("calc-text")[0].style.color = "hsl(0, 0%, 100%)";
-      document.getElementsByClassName("wrapper")[0].style.backgroundColor = " hsl(223, 31%, 20%)";
-      document.getElementsByClassName('result-container')[0].style.backgroundColor = 'hsl(224, 36%, 15%)';
-      document.getElementsByClassName('result-input')[0].style.backgroundColor = 'hsl(224, 36%, 15%)';
-      document.getElementsByClassName('result-input')[0].style.color = 'white';
-
-      var elements = document.getElementsByClassName("number-btn");
-      for (var i = 0, len = elements.length; i < len; i++) {
-      elements[i].style.backgroundColor = "white";
-      elements[i].style.color = "hsl(221, 14%, 31%)";
-      elements[i].style.boxShadow= "0px 5px 0px 0px  hsl(225, 6%, 60%)";
+    const colors = [
+      {
+        bgColor: " hsl(222, 26%, 31%)",
+        textColor: "white",
+        toggleColor:"hsl(6, 63%, 50%)",
+        calcColor: "hsl(0, 0%, 100%)",
+        wrapperColor: "hsl(223, 31%, 20%)",
+        resultContainerColor: "hsl(224, 36%, 15%)",
+        resultInputColor: "hsl(224, 36%, 15%)",
+        numberBtnBgColor: "white",
+        numberBtnTextColor: "hsl(221, 14%, 31%)",
+        numberBtnBoxShadow: "0px 5px 0px 0px  hsl(225, 6%, 60%)",
+        deleteBtnBgColor: "hsl(225, 21%, 49%)",
+        resetBtnBgColor: "hsl(225, 21%, 49%)",
+        equalBtnBgColor: "hsl(6, 63%, 50%)",
+        switchLabelColor: "white",
+        equalBtnBoxShadow: "0px 5px 0px 0px  hsl(6, 70%, 34%)"
+      },
+      {
+        bgColor: "hsl(0, 0%, 93%)",
+        textColor: "black",
+        toggleColor:"hsl(25, 98%, 40%)",
+        calcColor: "black",
+        wrapperColor: "hsl(0, 0%, 90%)",
+        resultContainerColor: "hsl(0, 0%, 100%)",
+        resultInputColor: "white",
+        numberBtnBgColor: "white",
+        numberBtnTextColor: "black",
+        numberBtnBoxShadow: "0px 5px 0px 0px  hsl(240, 1%, 50%)",
+        deleteBtnBgColor: "hsl(185, 42%, 37%)",
+        resetBtnBgColor: "hsl(185, 42%, 37%)",
+        equalBtnBgColor: "hsl(25, 98%, 40%)",
+        switchLabelColor: "black",
+        equalBtnBoxShadow: "0px 5px 0px 0px  hsl(6, 70%, 34%)"
+      },
+      {
+        bgColor: "hsl(268, 75%, 9%)",
+        textColor: "hsl(52, 100%, 62%)",
+        toggleColor:"hsl(176, 100%, 44%)",
+        calcColor: "hsl(52, 100%, 62%)",
+        wrapperColor: "hsl(268, 71%, 12%)",
+        resultContainerColor: "hsl(268, 71%, 12%)",
+        resultInputColor: "hsl(268, 71%, 12%)",
+        numberBtnBgColor: "hsl(268, 47%, 21%)",
+        numberBtnTextColor: "hsl(52, 100%, 62%)",
+        numberBtnBoxShadow: "0px 5px 0px 0px  hsl(290, 70%, 36%)",
+        deleteBtnBgColor: "hsl(281, 89%, 26%)",
+        resetBtnBgColor: "hsl(281, 89%, 26%)",
+        equalBtnBgColor: "hsl(176, 100%, 44%)",
+        switchLabelColor: "yellow",
+        equalBtnBoxShadow: "0px 5px 0px 0px   hsl(177, 92%, 70%)"
       }
-      document.getElementsByClassName("delete-btn")[0].style.backgroundColor = "hsl(225, 21%, 49%)";
-      document.getElementsByClassName("reset-btn")[0].style.backgroundColor = "hsl(225, 21%, 49%)";
-      document.getElementsByClassName("equal-btn")[0].style.backgroundColor = "hsl(6, 63%, 50%";
-      
-      var labels = document.getElementsByClassName("switch-label");
-      for (var i = 0, len = labels.length; i < len; i++) {
-        labels[i].style.color = 'white';
-        }
+    ];
+    document.getElementsByClassName("button")[0].style.backgroundColor = colors[index].toggleColor;
+    document.getElementsByClassName("button")[1].style.backgroundColor = colors[index].toggleColor;
+    document.getElementsByClassName("button")[2].style.backgroundColor = colors[index].toggleColor;
 
-        document.getElementsByClassName("equal-btn")[0].style.boxShadow= "0px 5px 0px 0px  hsl(6, 70%, 34%)";
-
-    
-
-
-    } else if (index === 1) {
-      document.getElementById("two").style.backgroundColor = "hsl(25, 98%, 40%)"
-      document.getElementsByClassName("toggle-label")[0].style.color = "black"
-      document.getElementsByTagName("body")[0].style.backgroundColor = "hsl(0, 0%, 93%)";
-      document.getElementsByClassName("calc-text")[0].style.color = "black";
-      document.getElementsByClassName("wrapper")[0].style.backgroundColor = "hsl(0, 0%, 90%)";
-      document.getElementsByClassName('result-container')[0].style.backgroundColor = 'hsl(0, 0%, 100%)';
-      document.getElementsByClassName('result-input')[0].style.backgroundColor = 'hsl(0, 0%, 100%)';
-      document.getElementsByClassName('result-input')[0].style.color = 'black';
-      var elements = document.getElementsByClassName("number-btn");
-      for (var i = 0, len = elements.length; i < len; i++) {
-      elements[i].style.backgroundColor = "white";
-      elements[i].style.color = "black";
-      elements[i].style.boxShadow= "0px 5px 0px 0px  hsl(240, 1%, 50%)";
-      }
-      document.getElementsByClassName("delete-btn")[0].style.backgroundColor = " hsl(185, 42%, 37%)";
-      document.getElementsByClassName("reset-btn")[0].style.backgroundColor = "hsl(185, 42%, 37%)";
-      document.getElementsByClassName("equal-btn")[0].style.backgroundColor = "hsl(25, 98%, 40%)";
-
-      var labels = document.getElementsByClassName("switch-label");
-      for (var i = 0, len = labels.length; i < len; i++) {
-        labels[i].style.color = 'black';
-        }
-
-        document.getElementsByClassName("equal-btn")[0].style.boxShadow= "0px 5px 0px 0px  hsl(6, 70%, 34%)";
-
-    
-    } else {
-      document.getElementById("three").style.backgroundColor = "hsl(176, 100%, 44%)"
-      document.getElementsByClassName("toggle-label")[0].style.color = "hsl(52, 100%, 62%)";
-      document.getElementsByTagName("body")[0].style.backgroundColor = "hsl(268, 75%, 9%)";
-      document.getElementsByClassName("wrapper")[0].style.backgroundColor = "hsl(268, 71%, 12%)";
-      document.getElementsByClassName("calc-text")[0].style.color = "hsl(52, 100%, 62%)";
-      document.getElementsByClassName('result-container')[0].style.backgroundColor = 'hsl(268, 71%, 12%)';
-      document.getElementsByClassName('result-input')[0].style.backgroundColor = 'hsl(268, 71%, 12%)';
-      document.getElementsByClassName('result-input')[0].style.color = 'hsl(52, 100%, 62%)';
-      var elements = document.getElementsByClassName("number-btn");
-      for (var i = 0, len = elements.length; i < len; i++) {
-      elements[i].style.backgroundColor = "hsl(268, 47%, 21%)";
-      elements[i].style.color = "hsl(52, 100%, 62%)";
-      elements[i].style.boxShadow= "0px 5px 0px 0px  hsl(290, 70%, 36%)";
-      }
-      document.getElementsByClassName("delete-btn")[0].style.backgroundColor = "  hsl(281, 89%, 26%)";
-      document.getElementsByClassName("reset-btn")[0].style.backgroundColor = " hsl(281, 89%, 26%)";
-      document.getElementsByClassName("equal-btn")[0].style.backgroundColor = "hsl(176, 100%, 44%)";
-
-      var labels = document.getElementsByClassName("switch-label");
-      for (var i = 0, len = labels.length; i < len; i++) {
-        labels[i].style.color = 'yellow';
-        }
-
-        document.getElementsByClassName("equal-btn")[0].style.boxShadow= "0px 5px 0px 0px   hsl(177, 92%, 70%)";
-
-
+    document.getElementsByClassName("toggle-label")[0].style.color = colors[index].textColor;
+    document.body.style.backgroundColor = colors[index].bgColor;
+    document.getElementsByClassName("calc-text")[0].style.color = colors[index].calcColor;
+    document.getElementsByClassName("wrapper")[0].style.backgroundColor = colors[index].wrapperColor;
+    document.getElementsByClassName('result-container')[0].style.backgroundColor = colors[index].resultContainerColor;
+    document.getElementsByClassName('result-input')[0].style.backgroundColor = colors[index].resultInputColor;
+    document.getElementsByClassName('result-input')[0].style.color = colors[index].textColor;
+    var elements = document.getElementsByClassName("number-btn");
+    for (var i = 0, len = elements.length; i < len; i++) {
+      elements[i].style.backgroundColor = colors[index].numberBtnBgColor;
+      elements[i].style.color = colors[index].numberBtnTextColor;
+      elements[i].style.boxShadow = colors[index].numberBtnBoxShadow;
     }
+    document.getElementsByClassName("delete-btn")[0].style.backgroundColor = colors[index].deleteBtnBgColor;
+    document.getElementsByClassName("reset-btn")[0].style.backgroundColor = colors[index].resetBtnBgColor;
+    document.getElementsByClassName("equal-btn")[0].style.backgroundColor = colors[index].equalBtnBgColor;
+    var labels = document.getElementsByClassName("switch-label");
+    for (var i = 0, len = labels.length; i < len; i++) {
+      labels[i].style.color = colors[index].switchLabelColor;
+    }
+    document.getElementsByClassName("equal-btn")[0].style.boxShadow = colors[index].equalBtnBoxShadow;
     buttons
       .filter((item) => item !== element)
       .forEach((item) => {

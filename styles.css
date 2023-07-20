@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -7,10 +8,10 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   color: black;
-  
+
 }
 
-.container-fluid{
+.container-fluid {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -19,83 +20,88 @@ body {
   font-family: 'League Spartan', sans-serif;
 }
 
-main {
+main {}
 
-}
-
-.top-container{
-  padding:2%;
+.top-container {
+  padding: 2%;
   display: flex;
 }
-.calc-text{
-  color:white;
+
+.calc-text {
+  color: white;
   font-size: 2rem;
 }
-.result-container{
-  height:130px;
-  width:36rem;
+
+.result-container {
+  height: 130px;
+  width: 36rem;
   border-radius: 15px;
   margin-bottom: 5%;
   display: flex;
   align-items: center;
   background-color: hsl(224, 36%, 15%);
-  padding:5%
+  padding: 5%
 }
-.result-container input{
+
+.result-container input {
   text-align: right;
   align-content: center;
   background-color: hsl(224, 36%, 15%);
-  color:white;
-  border:none;
+  color: white;
+  border: none;
   outline: none;
 
 }
-.input:focus{
 
-  border:none;
+.input:focus {
+
+  border: none;
 
 }
-#result{
-  width:100%;
-  height:5rem;
+
+#result {
+  width: 100%;
+  height: 5rem;
   font-size: 4rem;
-  
-  }
+
+}
 
 .wrapper {
   display: grid;
   grid-template-columns: repeat(4, 120px);
   gap: 15px;
-  grid-auto-rows: minmax(90px,15px);
-  padding:20px;
+  grid-auto-rows: minmax(90px, 15px);
+  padding: 20px;
   background-color: hsl(223, 31%, 20%);
   border-radius: 15px;
-  height:35rem;
-  width:36rem;
+  height: 35rem;
+  width: 36rem;
 
 }
 
-.reset-btn{
+.reset-btn {
   grid-column: 1/ 3;
   grid-row: 5;
 }
-.equal-btn{
+
+.equal-btn {
   grid-column: 3/ 5;
   grid-row: 5;
 
 }
 
-#number-btn{
-  background-color:  white;
-  color:hsl(221, 14%, 31%);
+#number-btn {
+  background-color: white;
+  color: hsl(221, 14%, 31%);
   font-size: 2.5rem;
   border-radius: 15px;
   height: 80px;
   border: none;
-  box-shadow: 0px 5px 0px 0px  hsl(225, 6%, 60%);
+  box-shadow: 0px 5px 0px 0px hsl(225, 6%, 60%);
 
 
 }
+
 #number-btn:active {
   transform: translateY(4px);
   box-shadow: 0 0px hsl(225, 6%, 60%);
@@ -103,14 +109,14 @@ main {
 }
 
 
-#delete-btn{
-  background-color:  hsl(225, 21%, 49%);
-  color:white;
+#delete-btn {
+  background-color: hsl(225, 21%, 49%);
+  color: white;
   font-size: 2.5rem;
   border-radius: 15px;
   height: 80px;
-  border:none;
-  box-shadow: 0px 5px 0px 0px   hsl(224, 28%, 35%);
+  border: none;
+  box-shadow: 0px 5px 0px 0px hsl(224, 28%, 35%);
 
 
 }
@@ -121,14 +127,14 @@ main {
 
 }
 
-#reset{
-  background-color:  hsl(225, 21%, 49%);
-  color:white;
+#reset {
+  background-color: hsl(225, 21%, 49%);
+  color: white;
   font-size: 2.5rem;
   border-radius: 15px;
   height: 80px;
-  border:none;
-  box-shadow: 0px 5px 0px 0px   hsl(224, 28%, 35%);
+  border: none;
+  box-shadow: 0px 5px 0px 0px hsl(224, 28%, 35%);
 }
 
 #reset:active {
@@ -138,33 +144,37 @@ main {
 }
 
 
-#equal{
+#equal {
   background-color: hsl(6, 63%, 50%);
-  color:white;
+  color: white;
   font-size: 2.5rem;
   border-radius: 15px;
   height: 80px;
-  border:none;
-  box-shadow: 0px 5px 0px 0px  hsl(6, 70%, 34%);
+  border: none;
+  box-shadow: 0px 5px 0px 0px hsl(6, 70%, 34%);
 }
+
 #equal:active {
   transform: translateY(4px);
   box-shadow: 0 0px hsl(6, 70%, 34%);
 
 }
-.toggle-label{
+
+.toggle-label {
   margin-left: auto;
   margin-right: 5px;
-  color:white;
+  color: white;
 }
-.switch-label{
-  color:white;
-  position:relative;
-  top:-20px;
+
+.switch-label {
+  color: white;
+  position: relative;
+  top: -20px;
   left: 10px;
 }
-.button{
-  height:20px;
+
+.button {
+  height: 20px;
   width: 20px;
   appearance: none;
   background-color: hsl(6, 63%, 50%);
@@ -178,11 +188,12 @@ main {
   justify-content: center;
   background-color: hsl(223, 31%, 20%);
   border-radius: 50px;
-  height:25px;
-  width:80px;
-  padding:2px;
+  height: 25px;
+  width: 80px;
+  padding: 2px;
 
 }
+
 #one {
   opacity: 1;
 }
@@ -190,7 +201,7 @@ main {
 
 @media screen and (max-width:600px) {
 
-  .container-fluid{
+  .container-fluid {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -198,38 +209,71 @@ main {
     height: 100%;
     margin-top: 10%;
   }
-  #result{
-    width:100%;
-    height:5rem;
-    font-size: 4rem;
-    
-    }
-    .result-container{
-      height:130px;
-      border-radius: 15px;
-      margin-bottom: 5%;
-      display: flex;
-      align-items: center;
-      background-color: hsl(224, 36%, 15%);
-      width:auto;
 
-    }
+  #result {
+    width: 100%;
+    height: 5rem;
+    font-size: 4rem;
+
+  }
+
+  .result-container {
+    height: 130px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(224, 36%, 15%);
+    width: 100%;
+
+
+
+  }
+
+  .calc-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+
+  }
+
   .wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 75px);
-    gap: 15px;
-    grid-auto-rows: minmax(90px,15px);
-    padding:20px;
+    grid-template-columns: repeat(4, 70px);
+    gap: 10px;
+    grid-auto-rows: minmax(90px, 10px);
+    padding: 15px;
     background-color: hsl(223, 31%, 20%);
     border-radius: 15px;
-    height:35rem;
-    width:auto;
-  
+    height: 33rem;
+    width: auto;
+
+
   }
-  
 
-.calc-container{
-  width:auto;
-}
 
+  #number-btn {
+    font-size: 2rem;
+    height: 65px;
+  }
+
+  #delete-btn {
+    font-size: 2rem;
+    height: 65px;
+
+  }
+
+  #reset {
+    font-size: 2rem;
+    height: 65px;
+
+
+  }
+
+  #equal {
+    font-size: 2rem;
+    height: 65px;
+
+  }
 }
