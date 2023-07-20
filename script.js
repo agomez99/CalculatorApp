@@ -1,4 +1,3 @@
-// Refactored code
 const getElement = (id) => document.getElementById(id);
 
 const numberWithCommas = (num) => {
@@ -58,7 +57,9 @@ buttons.forEach((element, index) => {
         numberBtnTextColor: "hsl(221, 14%, 31%)",
         numberBtnBoxShadow: "0px 5px 0px 0px  hsl(225, 6%, 60%)",
         deleteBtnBgColor: "hsl(225, 21%, 49%)",
+        deleteBtnBoxShadow:"0px 5px 0px 0px  hsl(224, 28%, 35%)",
         resetBtnBgColor: "hsl(225, 21%, 49%)",
+        resetBtnBoxShadow:"0px 5px 0px 0px  hsl(224, 28%, 35%)",
         equalBtnBgColor: "hsl(6, 63%, 50%)",
         switchLabelColor: "white",
         equalBtnBoxShadow: "0px 5px 0px 0px  hsl(6, 70%, 34%)"
@@ -75,7 +76,9 @@ buttons.forEach((element, index) => {
         numberBtnTextColor: "black",
         numberBtnBoxShadow: "0px 5px 0px 0px  hsl(240, 1%, 50%)",
         deleteBtnBgColor: "hsl(185, 42%, 37%)",
+        deleteBtnBoxShadow:"0px 5px 0px 0px hsl(224, 28%, 35%)",
         resetBtnBgColor: "hsl(185, 42%, 37%)",
+        resetBtnBoxShadow:"0px 5px 0px 0px hsl(224, 28%, 35%)",
         equalBtnBgColor: "hsl(25, 98%, 40%)",
         switchLabelColor: "black",
         equalBtnBoxShadow: "0px 5px 0px 0px  hsl(6, 70%, 34%)"
@@ -92,7 +95,9 @@ buttons.forEach((element, index) => {
         numberBtnTextColor: "hsl(52, 100%, 62%)",
         numberBtnBoxShadow: "0px 5px 0px 0px  hsl(290, 70%, 36%)",
         deleteBtnBgColor: "hsl(281, 89%, 26%)",
+        deleteBtnBoxShadow:"0px 5px 0px 0px  hsl(285, 91%, 52%)",
         resetBtnBgColor: "hsl(281, 89%, 26%)",
+        resetBtnBoxShadow:"0px 5px 0px 0px  hsl(285, 91%, 52%)",
         equalBtnBgColor: "hsl(176, 100%, 44%)",
         switchLabelColor: "yellow",
         equalBtnBoxShadow: "0px 5px 0px 0px   hsl(177, 92%, 70%)"
@@ -101,6 +106,7 @@ buttons.forEach((element, index) => {
     document.getElementsByClassName("button")[0].style.backgroundColor = colors[index].toggleColor;
     document.getElementsByClassName("button")[1].style.backgroundColor = colors[index].toggleColor;
     document.getElementsByClassName("button")[2].style.backgroundColor = colors[index].toggleColor;
+    document.getElementsByClassName("delete-btn")[0].style.boxShadow  = colors[index].deleteBtnBoxShadow;
 
     document.getElementsByClassName("toggle-label")[0].style.color = colors[index].textColor;
     document.body.style.backgroundColor = colors[index].bgColor;
@@ -116,7 +122,11 @@ buttons.forEach((element, index) => {
       elements[i].style.boxShadow = colors[index].numberBtnBoxShadow;
     }
     document.getElementsByClassName("delete-btn")[0].style.backgroundColor = colors[index].deleteBtnBgColor;
+
+
     document.getElementsByClassName("reset-btn")[0].style.backgroundColor = colors[index].resetBtnBgColor;
+    document.getElementsByClassName("reset-btn")[0].style.boxShadow = colors[index]. resetBtnBoxShadow;
+
     document.getElementsByClassName("equal-btn")[0].style.backgroundColor = colors[index].equalBtnBgColor;
     var labels = document.getElementsByClassName("switch-label");
     for (var i = 0, len = labels.length; i < len; i++) {
