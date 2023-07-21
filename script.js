@@ -29,9 +29,9 @@ const calculate = () => {
     return; // Do nothing if the input is empty
   }
   result = eval(result);
-  document.getElementById("result").value = formatNumberWithCommas(result);
+  getElement("result").value = formatNumberWithCommas(result);
   if (result === Infinity) {
-    document.getElementById("result").value = "Error";
+    getElement("result").value = "Error";
     return;
   }
 }
@@ -53,9 +53,9 @@ buttons.forEach((element, index) => {
         wrapperColor: "hsl(223, 31%, 20%)",
         resultContainerColor: "hsl(224, 36%, 15%)",
         resultInputColor: "hsl(224, 36%, 15%)",
-        numberBtnBgColor: "white",
+        numberBtnBgColor: "hsl(30, 25%, 89%)",
         numberBtnTextColor: "hsl(221, 14%, 31%)",
-        numberBtnBoxShadow: "0px 5px 0px 0px  hsl(225, 6%, 60%)",
+        numberBtnBoxShadow: "0px 5px 0px 0px  hsl(28, 16%, 65%)",
         deleteBtnBgColor: "hsl(225, 21%, 49%)",
         deleteBtnBoxShadow:"0px 5px 0px 0px  hsl(224, 28%, 35%)",
         resetBtnBgColor: "hsl(225, 21%, 49%)",
@@ -103,36 +103,33 @@ buttons.forEach((element, index) => {
         equalBtnBoxShadow: "0px 5px 0px 0px   hsl(177, 92%, 70%)"
       }
     ];
+    document.body.style.backgroundColor = colors[index].bgColor;
     document.getElementsByClassName("button")[0].style.backgroundColor = colors[index].toggleColor;
     document.getElementsByClassName("button")[1].style.backgroundColor = colors[index].toggleColor;
     document.getElementsByClassName("button")[2].style.backgroundColor = colors[index].toggleColor;
-    document.getElementsByClassName("delete-btn")[0].style.boxShadow  = colors[index].deleteBtnBoxShadow;
-
     document.getElementsByClassName("toggle-label")[0].style.color = colors[index].textColor;
-    document.body.style.backgroundColor = colors[index].bgColor;
     document.getElementsByClassName("calc-text")[0].style.color = colors[index].calcColor;
     document.getElementsByClassName("wrapper")[0].style.backgroundColor = colors[index].wrapperColor;
     document.getElementsByClassName('result-container')[0].style.backgroundColor = colors[index].resultContainerColor;
     document.getElementsByClassName('result-input')[0].style.backgroundColor = colors[index].resultInputColor;
     document.getElementsByClassName('result-input')[0].style.color = colors[index].textColor;
+    document.getElementsByClassName("delete-btn")[0].style.backgroundColor = colors[index].deleteBtnBgColor;
+    document.getElementsByClassName("delete-btn")[0].style.boxShadow  = colors[index].deleteBtnBoxShadow;
+    document.getElementsByClassName("reset-btn")[0].style.backgroundColor = colors[index].resetBtnBgColor;
+    document.getElementsByClassName("reset-btn")[0].style.boxShadow = colors[index]. resetBtnBoxShadow;
+    document.getElementsByClassName("equal-btn")[0].style.backgroundColor = colors[index].equalBtnBgColor;
+    document.getElementsByClassName("equal-btn")[0].style.boxShadow = colors[index].equalBtnBoxShadow;
     var elements = document.getElementsByClassName("number-btn");
     for (var i = 0, len = elements.length; i < len; i++) {
       elements[i].style.backgroundColor = colors[index].numberBtnBgColor;
       elements[i].style.color = colors[index].numberBtnTextColor;
       elements[i].style.boxShadow = colors[index].numberBtnBoxShadow;
     }
-    document.getElementsByClassName("delete-btn")[0].style.backgroundColor = colors[index].deleteBtnBgColor;
 
-
-    document.getElementsByClassName("reset-btn")[0].style.backgroundColor = colors[index].resetBtnBgColor;
-    document.getElementsByClassName("reset-btn")[0].style.boxShadow = colors[index]. resetBtnBoxShadow;
-
-    document.getElementsByClassName("equal-btn")[0].style.backgroundColor = colors[index].equalBtnBgColor;
     var labels = document.getElementsByClassName("switch-label");
     for (var i = 0, len = labels.length; i < len; i++) {
       labels[i].style.color = colors[index].switchLabelColor;
     }
-    document.getElementsByClassName("equal-btn")[0].style.boxShadow = colors[index].equalBtnBoxShadow;
     buttons
       .filter((item) => item !== element)
       .forEach((item) => {

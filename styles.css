@@ -17,10 +17,6 @@ body {
   height: 100vh;
   font-family: 'League Spartan', sans-serif;
 }
-
-main {
-}
-
 .top-container {
   padding: 2%;
   display: flex;
@@ -31,7 +27,7 @@ main {
 }
 .result-container {
   height: 130px;
-  width: 36rem;
+  width: 33rem;
   border-radius: 15px;
   margin-bottom: 5%;
   display: flex;
@@ -46,6 +42,8 @@ main {
   color: white;
   border: none;
   outline: none;
+  
+  
 }
 .input:focus {
   border: none;
@@ -58,14 +56,13 @@ main {
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 120px);
+  grid-template-columns: repeat(4, 110px);
   gap: 15px;
   grid-auto-rows: minmax(90px, 15px);
-  padding: 20px;
+  padding: 25px;
   background-color: hsl(223, 31%, 20%);
   border-radius: 15px;
-  height: 35rem;
-  width: 36rem;
+  width: 33rem;
 }
 
 .reset-btn {
@@ -78,47 +75,52 @@ main {
 }
 
 #number-btn {
-  background-color: white;
+  background-color: hsl(30, 25%, 89%);
   color: hsl(221, 14%, 31%);
   font-size: 2.5rem;
   border-radius: 15px;
-  height: 80px;
+  height: 70px;
   border: none;
-  box-shadow: 0px 5px 0px 0px hsl(225, 6%, 60%);
+  box-shadow: 0px 5px 0px 0px hsl(28, 16%, 65%);
 }
-#number-btn:active {
+#number-btn:active{
   transform: translateY(4px);
-  box-shadow: none;
+  box-shadow: none !important;
+  filter: brightness(1.75) !important;
 }
 
 #delete-btn {
   background-color: hsl(225, 21%, 49%);
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   border-radius: 15px;
-  height: 80px;
+  height: 70px;
   border: none;
   box-shadow: 0px 5px 0px 0px hsl(224, 28%, 35%);
 }
 
 #delete-btn:active {
   transform: translateY(4px);
-  box-shadow: none;
+  box-shadow: none !important;
+  filter: brightness(1.75) !important;
+
 }
 
 #reset {
   background-color: hsl(225, 21%, 49%);
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   border-radius: 15px;
-  height: 80px;
+  height: 70px;
   border: none;
   box-shadow: 0px 5px 0px 0px hsl(224, 28%, 35%);
 }
 
 #reset:active {
   transform: translateY(4px);
-  box-shadow: none;
+  box-shadow: none !important;
+  filter: brightness(1.75) !important;
+
 }
 
 #equal {
@@ -126,13 +128,15 @@ main {
   color: white;
   font-size: 2.5rem;
   border-radius: 15px;
-  height: 80px;
+  height: 70px;
   border: none;
   box-shadow: 0px 5px 0px 0px hsl(6, 70%, 34%);
 }
 #equal:active {
   transform: translateY(4px);
-  box-shadow: none;
+  box-shadow: none !important;
+  filter: brightness(1.75) !important;
+
 }
 .toggle-label {
   margin-left: auto;
@@ -153,6 +157,10 @@ main {
   border-radius: 50%;
   opacity: 0;
   cursor: pointer;
+}
+.button:active{
+  filter: brightness(1.75) !important;
+
 }
 
 .tri-state-toggle {
