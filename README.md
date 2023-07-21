@@ -7,7 +7,7 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 ### Links
 
 - Solution URL: [https://github.com/agomez99/CalculatorApp](https://github.com/agomez99/CalculatorApp)
-- Live Site URL: [https://agomez99.github.io/CalculatorApp/]https://agomez99.github.io/CalculatorApp/)
+- Live Site URL: [https://agomez99.github.io/CalculatorApp/](https://agomez99.github.io/CalculatorApp/)
 
 ## My process
 
