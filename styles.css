@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+@font-face {
+  font-family: calcFont;
+  src:url("./Digital7-rg1mL.ttf");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -42,16 +47,19 @@ body {
   color: white;
   border: none;
   outline: none;
-  
+
   
 }
+
 .input:focus {
   border: none;
 }
 #result {
   width: 100%;
   height: 5rem;
-  font-size: 4rem;
+  font-size: 5rem;
+  font-family: 'calcFont';
+
 }
 
 .wrapper {
